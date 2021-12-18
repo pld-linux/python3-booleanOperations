@@ -1,0 +1,10 @@
+--- booleanOperations-0.9.0/setup.cfg.orig	2019-11-13 17:52:44.000000000 +0100
++++ booleanOperations-0.9.0/setup.cfg	2021-12-18 20:17:51.196441590 +0100
+@@ -25,7 +25,6 @@ packages = find:
+ python_requires = >=3.6
+ setup_requires = 
+ 	setuptools_scm
+-	wheel
+ install_requires = 
+ 	pyclipper >= 1.1.0.post1
+ 	fonttools >= 4.0.2
