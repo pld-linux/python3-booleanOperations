@@ -40,7 +40,7 @@ biblioteki obcinania wielokątów autorstwa Angusa Johnsona.
 
 %prep
 %setup -q -n booleanOperations-%{version}
-%patch0 -p1
+%patch -P 0 -p1
 
 %build
 %py3_build
