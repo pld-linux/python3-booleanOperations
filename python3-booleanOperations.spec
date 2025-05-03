@@ -6,7 +6,7 @@ Summary:	Boolean operations on paths
 Summary(pl.UTF-8):	Operacje logiczne na ścieżkach
 Name:		python3-booleanOperations
 Version:	0.9.0
-Release:	5
+Release:	6
 License:	MIT
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/booleanOperations/
@@ -18,8 +18,10 @@ BuildRequires:	python3-modules >= 1:3.6
 BuildRequires:	python3-setuptools
 BuildRequires:	python3-setuptools_scm >= 1.14.1
 %if %{with tests}
+BuildRequires:	python3-defcon
 BuildRequires:	python3-fontPens
 BuildRequires:	python3-fonttools >= 4.0.2
+BuildRequires:	python3-fs
 BuildRequires:	python3-pyclipper >= 1.1.0.post1
 BuildRequires:	python3-pytest >= 3.0.2
 %endif
@@ -48,6 +50,7 @@ biblioteki obcinania wielokątów autorstwa Angusa Johnsona.
 %if %{with tests}
 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 \
 PYTHONPATH=$(pwd)/Lib \
+PYTEST_PLUGINS= \
 %{__python3} -m pytest tests
 %endif
 
